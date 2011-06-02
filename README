@@ -1,0 +1,18 @@
+A sample django app for presentation at Europython 2011
+=======================================================
+The primary goal of this talk is twofold: to evaluate the need of data mining and introduce some very cool, simple yet powerful machine learning techniques to audience such as classification, clustering, collaborative filtering, recommendation etc in your Python web applications. This talk will conclude with some explanation and limitations of machine learning algorithms.
+
+Required
+==========
+1. Python 2.5+
+2. Django web framework
+
+Installation
+===========
+
+git clone https://iapain@github.com/iapain/smartwebapps.git
+cd smartwebapps
+python manage.py syncdb
+python manage.py runserver
+
+
