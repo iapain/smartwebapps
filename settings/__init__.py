@@ -120,7 +120,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.contrib.messages.context_processors.messages",
-    "core.context_processors.common",
 )
 
 # Registration prefs
