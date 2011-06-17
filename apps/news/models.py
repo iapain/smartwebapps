@@ -3,6 +3,7 @@ import datetime
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils.html import strip_tags
 from django.utils.translation import ugettext_lazy as _
 
 from contrib.feedparser import feedparser
@@ -58,7 +59,7 @@ def create_news_items(sender, instance, created, **kwargs):
                 date = datetime.datetime.now()
             else:
                 date = datetime.datetime(*item.updated_parsed[:6])
-            news = News(url=item.link, title=item.title, body=item.summary,
+            news = News(url=item.link, title=item.title, body=strip_tags(item.summary),
                         date=date, source=instance)
             news.save()
     
