@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}
+    Latest Tweets
+{% endblock %}
+{% block body %}
+<style>
+.tweet {
+    font-size: 1.5em;
+    margin: 15px;
+    padding-left: 10px;
+    background: #E0E0E0;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.happy {
+    color: green;
+}
+.sad {
+    color: red;
+}
+</style>
+{% for tweet in tweets %}
+    <div class="tweet{% if tweet.polarity == 'H' %} happy{% endif %}{% if tweet.polarity == 'S' %} sad{% endif %}">{{ tweet.text|safe }}</div>
+{% endfor %} 
+{% endblock %}

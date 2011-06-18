@@ -57,7 +57,7 @@ class Cluster(object):
                     if distance <= min_distance:
                         best_center = minima
                         min_distance = distance
-                    # maintain quality of your cluster
+                # maintain quality of your cluster
                 if min_distance <= threshold:#threshold
                     best_matches[best_center].append(item)
                     
@@ -73,7 +73,7 @@ class Cluster(object):
             seen = 0
             for i in c:
                 seen = 1
-                tmp.append(i.title)
+                tmp.append(i)
             if seen:
                 tmp.append(centroids[cnt])
             ret.append(tmp)

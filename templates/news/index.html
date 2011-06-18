@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}
+    Latest News
+{% endblock %}
+{% block body %}
+{% for cluster in clusters %}
+    {% for item in cluster.get_items %}
+        {% if forloop.counter == 1 %}
+        <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+        <div>{{ item.body|truncatewords:"20" }}</div>
+        <ul>
+        {% else %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a> - <span style="color:gray">{{ item.source.name }}</span></li>
+        {% endif %}
+        </ul>
+    {% endfor %}
+    </ul>
+    <br />
+{% endfor %} 
+{% endblock %}

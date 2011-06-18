@@ -17,6 +17,9 @@ class Cluster(models.Model):
         if not self.id:
             self.created = datetime.datetime.now()
         super(Cluster, self).save()
+        
+    def get_items(self):
+        return News.objects.filter(cluster=self)
   
     def __unicode__(self):
         return u'%d' % self.pk
@@ -30,7 +33,7 @@ class NewsSource(models.Model):
         return self.name
     
 class News(models.Model):
-    url = models.URLField(_("URL"), verify_exists=False, unique=True)
+    url = models.URLField(_("URL"), verify_exists=False)
     title = models.CharField(_("Title"), max_length=200)
     body = models.TextField(null=True, blank=True)
     date = models.DateTimeField()
