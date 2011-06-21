@@ -106,7 +106,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.markup',
-    'apps.djangoratings',
     'apps.news',
     'apps.emoter',
     # Uncomment the next line to enable the admin:
@@ -121,14 +120,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.messages.context_processors.messages",
 )
 
-# Registration prefs
-ACCOUNT_ACTIVATION_DAYS = 7
-
-# App name
-LOGIN_URL = '/accounts/login'
-LOGIN_REDIRECT_URL = '/dashboard'
-APP_NAME = 'EP2011 Demo'
-AUTH_PROFILE_MODULE = 'account.UserProfile'
 
 # Load local environment.
 try:
