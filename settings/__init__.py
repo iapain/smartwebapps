@@ -107,7 +107,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.markup',
     'apps.djangoratings',
-    'apps.movie',
     'apps.news',
     'apps.emoter',
     # Uncomment the next line to enable the admin:
