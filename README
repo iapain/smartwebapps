@@ -10,7 +10,7 @@ Required
 Installation
 ===========
 
-git clone https://iapain@github.com/iapain/smartwebapps.git
+git clone http://github.com/iapain/smartwebapps.git
 cd smartwebapps
 python manage.py syncdb
 python manage.py clusternews
