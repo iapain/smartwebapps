@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import *
+from django.views.generic.simple import direct_to_template
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -13,6 +14,7 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
+    (r'^$', direct_to_template, {'template': 'home.html'}),
     (r'^emoter/', include('apps.emoter.urls')),
     (r'^news/', include('apps.news.urls')),
     (r'^admin/', include(admin.site.urls)),

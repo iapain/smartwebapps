@@ -5,7 +5,7 @@ The primary goal of this talk is twofold: to evaluate the need of data mining an
 Required
 ==========
 1. Python 2.5+
-2. Django web framework
+2. Django 3.0+
 
 Installation
 ===========
@@ -13,6 +13,7 @@ Installation
 git clone https://iapain@github.com/iapain/smartwebapps.git
 cd smartwebapps
 python manage.py syncdb
+python manage.py clusternews
 python manage.py runserver
 
 
